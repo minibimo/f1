@@ -13,17 +13,28 @@
             padding: 20px;
         }
         h2 {
-            color: #f1f1f1f1;
-            padding-bottom: 20px;
+            color: MistyRose;
+            padding: 20px;
+            background-color: #2a2a2a;
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 60px rgba(255, 102, 102, 0.5);
+            margin-bottom: 20px;
+            display: inline-block;
+            margin-bottom: 30px;
+            border: 3px solid #ff3838;
+            border-radius: 10px;
+            font-weight: bold;
         }
         table {
             width: 80%;
             margin: auto;
-            border-collapse: collapse;
+            border: 4px solid #ff3838;
+            border-spacing: 0;
             background-color: #2a2a2a;
             border-radius: 10px;
             overflow: hidden;
-            box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
+            box-shadow: 0 0 40px rgba(255, 102, 102, 1);
         }
         th, td {
             padding: 25px;
@@ -37,16 +48,40 @@
             text-align: center;
         }
         tr:nth-child(even) {
-            background-color: #4;
+            background-color: #222;
         }
         tr:hover {
-            background-color: #444;
+            background-color: #333;
         }
         img {
             width: 50px;
             height: 50px;
             border-radius: 50%;
             border: 2px solid #f5a623;
+        }
+        .button-container {
+            margin-top: 30px;
+            padding: 20px;
+            background-color: #2a2a2a;
+            border: 3px solid #ff3838;
+            border-radius: 10px;
+            display: inline-block;
+            box-shadow: 0 0 40px rgba(255, 102, 102, 1);
+        }
+        .button-container a {
+            color: MistyRose;
+            text-decoration: none;
+            font-size: 17px;
+            font-weight: bold;
+            padding: 11px 11px;
+            border-radius: 10px;
+            background-color: #ff4a4a;
+            box-shadow: 0px 0px 15px rgba(255, 102, 102, 0.6);
+            transition: background-color 0.3s ease, box-shadow 0.3s ease;
+        }
+        .button-container a:hover {
+            background-color: #d92b2b;
+            box-shadow: 0px 0px 100px rgba(255, 102, 102, 0.8);
         }
     </style>
 </head>
@@ -63,7 +98,7 @@
             <th>Łączne Punkty</th>
         </tr>
         <tr>
-            <td><img src="RansiakProfilowe.png" alt="Profile"></td>
+            <td><img src="RansiakProfilowe.png" alt=""></td>
             <td>Ransiak</td>
             <td>Ferrari</td>
             <td>0</td>
@@ -71,7 +106,7 @@
             <td>0</td>
         </tr>
         <tr>
-            <td><img src="SzczepixProfilowe.png" alt="Profile"></td>
+            <td><img src="SzczepixProfilowe.png" alt=""></td>
             <td>Szczepix</td>
             <td>Lotus</td>
             <td>0</td>
@@ -79,15 +114,15 @@
             <td>0</td>
         </tr>
                 <tr>
-            <td><img src="KrolikProfilowe.png" alt="Profile"></td>
-            <td>Krolik2</td>
+            <td><img src="KrolikProfilowe.png" alt=""></td>
+            <td>Krolik</td>
             <td>Lotus</td>
             <td>0</td>
             <td>0</td>
             <td>0</td>
         </tr>
                 <tr>
-            <td><img src="RaisterProfilowe.png" alt="Profile"></td>
+            <td><img src="RaisterProfilowe.png" alt=""></td>
             <td>Raister</td>
             <td>Mercedes</td>
             <td>0</td>
@@ -95,7 +130,7 @@
             <td>0</td>
         </tr>
                 <tr>
-            <td><img src="WoitiZProfilowe.png" alt="Profile"></td>
+            <td><img src="WoitiZProfilowe.png" alt=""></td>
             <td>WojtiZ</td>
             <td>N/A</td>
             <td>0</td>
@@ -103,6 +138,10 @@
             <td>0</td>
         </tr>
     </table>
+    <div class="button-container">
+        <a href="https://minibimo.github.io/f1/tabelaDrużynowa.html" target="_blank">Tabela Drużynowa</a>
+    </div>
+
 
 </body>
 </html>
