@@ -13,58 +13,88 @@
             text-align: center;
             padding: 20px;
         }
+
         h2 {
             color: MistyRose;
-            padding: 20px;
             background-color: #2a2a2a;
             padding: 15px;
             border-radius: 10px;
             box-shadow: 0px 4px 60px rgba(255, 102, 102, 0.5);
-            margin-bottom: 20px;
-            display: inline-block;
             margin-bottom: 30px;
             border: 3px solid #ff3838;
-            border-radius: 10px;
             font-weight: bold;
+            display: inline-block;
         }
-        table {
+
+        .table-container {
             width: 80%;
             margin: auto;
             border: 4px solid #ff3838;
-            border-spacing: 0;
             background-color: #2a2a2a;
             border-radius: 10px;
             overflow: hidden;
             box-shadow: 0 0 40px rgba(255, 102, 102, 1);
         }
-        th, td {
-            padding: 25px;
-            border-bottom: 3px solid #444;
+
+        table {
+            width: 100%;
+            border-spacing: 0;
+            table-layout: fixed;
         }
-       th {
+
+        thead {
             background-color: #9c0000;
             color: MistyRose;
             font-size: 20px;
-            width: 150px;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 2;
+        }
+
+        th, td {
+            padding: 25px;
+            border-bottom: 3px solid #444;
             text-align: center;
         }
+
+        .table-content {
+            max-height: 600px; /* Adjust the height as needed */
+            overflow-y: auto;
+            display: block;
+        }
+
+        tbody {
+            display: block;
+            width: 100%;
+        }
+
+        tr {
+            display: table;
+            width: 100%;
+            table-layout: fixed;
+        }
+
         tr:nth-child(even) {
             background-color: #222;
         }
+
         tr:hover {
             background-color: #333;
         }
+
         img {
             width: 50px;
             height: 50px;
             border-radius: 50%;
             border: 2px solid #f5a623;
         }
+
         .button-container {
             margin-top: 30px;
             display: flex;
             justify-content: center;
-            gap: 20px; /* Space between buttons */
+            gap: 20px;
             padding: 20px;
             background-color: #2a2a2a;
             border: 3px solid #ff3838;
@@ -74,6 +104,7 @@
             margin-left: auto;
             margin-right: auto;
         }
+
         .button-container a {
             color: MistyRose;
             text-decoration: none;
@@ -85,6 +116,7 @@
             box-shadow: 0px 0px 15px rgba(255, 102, 102, 0.6);
             transition: background-color 0.3s ease, box-shadow 0.3s ease;
         }
+
         .button-container a:hover {
             background-color: #d92b2b;
             box-shadow: 0px 0px 100px rgba(255, 102, 102, 0.8);
@@ -94,59 +126,76 @@
 <body>
 
     <h2>Tabela Personalna</h2>
-    <table>
-        <tr>
-            <th>Zdjęcie</th>
-            <th>Nazwa</th>
-            <th>Drużyna</th>
-            <th>Przejechane Wyścigi</th>
-            <th>Punkty z Ostatniego Wyścigu</th>
-            <th>Łączne Punkty</th>
-        </tr>
-        <tr>
-            <td><img src="RansiakProfilowe.png" alt=""></td>
-            <td>Ransiak</td>
-            <td>Ferrari</td>
-            <td>0</td>
-            <td>0</td>
-            <td>0</td>
-        </tr>
-        <tr>
-            <td><img src="SzczepixProfilowe.png" alt=""></td>
-            <td>Szczepix</td>
-            <td>Lotus</td>
-            <td>0</td>
-            <td>0</td>
-            <td>0</td>
-        </tr>
+
+    <div class="table-container">
+        <table>
+            <thead>
                 <tr>
-            <td><img src="KrolikProfilowe.png" alt=""></td>
-            <td>Krolik</td>
-            <td>Lotus</td>
-            <td>0</td>
-            <td>0</td>
-            <td>0</td>
-        </tr>
+                    <th>Zdjęcie</th>
+                    <th>Nazwa</th>
+                    <th>Drużyna</th>
+                    <th>Przejechane Wyścigi</th>
+                    <th>Punkty z Ostatniego Wyścigu</th>
+                    <th>Łączne Punkty</th>
+                </tr>
+            </thead>
+            <tbody class="table-content">
                 <tr>
-            <td><img src="RaisterProfilowe.png" alt=""></td>
-            <td>Raister</td>
-            <td>Mercedes</td>
-            <td>0</td>
-            <td>0</td>
-            <td>0</td>
-        </tr>
+                    <td><img src="RansiakProfilowe.png" alt=""></td>
+                    <td>Ransiak</td>
+                    <td>Ferrari</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                </tr>
                 <tr>
-            <td><img src="WoitiZProfilowe.png" alt=""></td>
-            <td>WojtiZ</td>
-            <td>N/A</td>
-            <td>0</td>
-            <td>0</td>
-            <td>0</td>
-        </tr>
-    </table>
+                    <td><img src="SzczepixProfilowe.png" alt=""></td>
+                    <td>Szczepix</td>
+                    <td>Lotus</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                </tr>
+                <tr>
+                    <td><img src="KrolikProfilowe.png" alt=""></td>
+                    <td>Krolik</td>
+                    <td>Lotus</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                </tr>
+                <tr>
+                    <td><img src="RaisterProfilowe.png" alt=""></td>
+                    <td>Raister</td>
+                    <td>Mercedes</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                </tr>
+                <tr>
+                    <td><img src="WoitiZProfilowe.png" alt=""></td>
+                    <td>WojtiZ</td>
+                    <td>N/A</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                </tr>
+                <tr>
+                    <td><img src="BartoProfilowe.png" alt=""></td>
+                    <td>B4rt0</td>
+                    <td>N/A</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
     <div class="button-container">
         <a href="https://minibimo.github.io/f1/tabelaTorow.html">Tabela Torów</a>
         <a href="https://minibimo.github.io/f1/tabelaDruzynowa.html">Tabela Drużynowa</a>
     </div>
+
 </body>
 </html>
