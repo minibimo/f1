@@ -12,6 +12,20 @@
             font-family: Arial, sans-serif;
             text-align: center;
             padding: 20px;
+            position: relative;
+        }
+
+        /* Background Image with Transparency */
+        body::before {
+            content: "";
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('zdj.png') no-repeat center center/cover;
+            opacity: 0.08; /* Adjust transparency */
+            z-index: -1;
         }
 
         h2 {
@@ -59,7 +73,7 @@
         }
 
         .table-content {
-            max-height: 600px; /* Adjust the height as needed */
+            max-height: 600px;
             overflow-y: auto;
             display: block;
         }
@@ -81,6 +95,11 @@
 
         tr:hover {
             background-color: #333;
+        }
+
+        /* Prevent column headers from changing color on hover */
+        thead tr:hover {
+            background-color: #9c0000 !important;
         }
 
         img {
@@ -121,26 +140,24 @@
             background-color: #d92b2b;
             box-shadow: 0px 0px 100px rgba(255, 102, 102, 0.8);
         }
+
         .table-content::-webkit-scrollbar {
             width: 10px;
         }
-        
+
         .table-content::-webkit-scrollbar-track {
             background: #2a2a2a;
             border-radius: 10px;
         }
-        
+
         .table-content::-webkit-scrollbar-thumb {
             background: #ff3838;
             border-radius: 10px;
             border: 2px solid #9c0000;
         }
-        
+
         .table-content::-webkit-scrollbar-thumb:hover {
             background: #d92b2b;
-        }
-        thead tr:hover {
-            background-color: #9c0000;
         }
     </style>
 </head>
@@ -189,38 +206,6 @@
                     <td><img src="RaisterProfilowe.png" alt=""></td>
                     <td>Raister</td>
                     <td>Mercedes</td>
-                    <td>0</td>
-                    <td>0</td>
-                    <td>0</td>
-                </tr>
-                <tr>
-                    <td><img src="WoitiZProfilowe.png" alt=""></td>
-                    <td>WojtiZ</td>
-                    <td>N/A</td>
-                    <td>0</td>
-                    <td>0</td>
-                    <td>0</td>
-                </tr>
-                <tr>
-                    <td><img src="BartoProfilowe.png" alt=""></td>
-                    <td>B4rt0</td>
-                    <td>N/A</td>
-                    <td>0</td>
-                    <td>0</td>
-                    <td>0</td>
-                </tr>
-                <tr>
-                    <td><img src="JasioProfilowe.png" alt=""></td>
-                    <td>Dziador</td>
-                    <td>N/A</td>
-                    <td>0</td>
-                    <td>0</td>
-                    <td>0</td>
-                </tr>
-                <tr>
-                    <td><img src="ViniProfilowe.png" alt=""></td>
-                    <td>Vini</td>
-                    <td>N/A</td>
                     <td>0</td>
                     <td>0</td>
                     <td>0</td>
