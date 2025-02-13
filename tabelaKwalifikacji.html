@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabela Kwalifikacji</title>
+    <link rel="icon" href="F1logo.png" type="image/png">
+    <style>
+        body {
+            background-color: #1e1e1e;
+            color: #fff;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 20px;
+        }
+        body::before {
+            content: "";
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('zdj.png') no-repeat center center/cover;
+            opacity: 0.08;
+            z-index: -1;
+        }
+        h2 {
+            color: MistyRose;
+            background-color: #2a2a2a;
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 60px rgba(255, 102, 102, 0.5);
+            margin-bottom: 30px;
+            border: 3px solid #ff3838;
+            font-weight: bold;
+            display: inline-block;
+        }
+
+        .table-container {
+            width: 80%;
+            margin: auto;
+            border: 4px solid #ff3838;
+            background-color: #2a2a2a;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 0 40px rgba(255, 102, 102, 1);
+        }
+
+        table {
+            width: 100%;
+            border-spacing: 0;
+            table-layout: fixed;
+        }
+
+        thead {
+            background-color: #9c0000;
+            color: MistyRose;
+            font-size: 20px;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 2;
+        }
+
+        th, td {
+            padding: 25px;
+            border-bottom: 3px solid #444;
+            text-align: center;
+        }
+
+        .table-content {
+            max-height: 600px;
+            overflow-y: auto;
+            display: block;
+        }
+
+        tbody {
+            display: block;
+            width: 100%;
+        }
+
+        tr {
+            display: table;
+            width: 100%;
+            table-layout: fixed;
+        }
+
+        tr:nth-child(even) {
+            background-color: #222;
+        }
+
+        tr:hover {
+            background-color: #333;
+        }
+
+        img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            border: 2px solid #f5a623;
+        }
+
+        .button-container {
+            margin-top: 30px;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            padding: 20px;
+            background-color: #2a2a2a;
+            border: 3px solid #ff3838;
+            border-radius: 10px;
+            box-shadow: 0 0 40px rgba(255, 102, 102, 1);
+            width: fit-content;
+            margin-left: auto;
+            margin-right: auto;
+            
+        }
+
+        .button-container a {
+            color: MistyRose;
+            text-decoration: none;
+            font-size: 17px;
+            font-weight: bold;
+            padding: 11px 11px;
+            border-radius: 10px;
+            background-color: #ff4a4a;
+            box-shadow: 0px 0px 15px rgba(255, 102, 102, 0.6);
+            transition: background-color 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .button-container a:hover {
+            background-color: #d92b2b;
+            box-shadow: 0px 0px 100px rgba(255, 102, 102, 0.8);
+        }
+        .table-content::-webkit-scrollbar {
+            width: 10px;
+        }
+        
+        .table-content::-webkit-scrollbar-track {
+            background: #2a2a2a;
+            border-radius: 10px;
+        }
+        
+        .table-content::-webkit-scrollbar-thumb {
+            background: #ff3838;
+            border-radius: 10px;
+            border: 2px solid #9c0000;
+        }
+        
+        .table-content::-webkit-scrollbar-thumb:hover {
+            background: #d92b2b;
+        }
+        thead tr:hover {
+            background-color: #9c0000;
+        }
+        .footer-text {
+        position: fixed;
+        bottom: 10px;
+        right: 15px;
+        font-size: 10px;
+        color: rgba(255, 255, 255, 0.5);
+        font-family: Arial, sans-serif;
+        user-select: none;
+    }
+    </style>
+</head>
+<body>
+
+    <h2>Tabela Kwalifikacji</h2>
+
+    <div class="table-container">
+        <table>
+            <thead>
+                <tr>
+                    <th>Zdjęcie</th>
+                    <th>Nazwa</th>
+                    <th>Tor</th>
+                    <th>Njaszybszy Czas Kwalifikacji</th>
+                </tr>
+            </thead>
+            <tbody class="table-content">
+                <tr>
+                    <td><img src="RansiakProfilowe.png" alt=""></td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+<div class="button-container">
+    <div style="display: flex; flex-direction: column; align-items: center;">
+        <div style="display: flex; gap: 20px;">
+            <a href="https://minibimo.github.io/f1/tabelaTorow.html">Tabela Torów</a>
+            <a href="https://minibimo.github.io/f1/tabelaDruzynowa.html">Tabela Drużynowa</a>
+        </div>
+        <a href="https://minibimo.github.io/f1/tabelaKierowcow.html" style="margin-top: 15px;">Tabela Kierowców</a>
+    </div>
+</div>
+    <div class="footer-text">Brought to you by minibimo</div>
+</body>
+</html>
