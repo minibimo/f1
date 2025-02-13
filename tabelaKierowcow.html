@@ -12,10 +12,7 @@
             font-family: Arial, sans-serif;
             text-align: center;
             padding: 20px;
-            position: relative;
         }
-
-        /* Background Image with Transparency */
         body::before {
             content: "";
             position: fixed;
@@ -24,10 +21,9 @@
             width: 100%;
             height: 100%;
             background: url('zdj.png') no-repeat center center/cover;
-            opacity: 0.08; /* Adjust transparency */
+            opacity: 0.07;
             z-index: -1;
         }
-
         h2 {
             color: MistyRose;
             background-color: #2a2a2a;
@@ -97,11 +93,6 @@
             background-color: #333;
         }
 
-        /* Prevent column headers from changing color on hover */
-        thead tr:hover {
-            background-color: #9c0000 !important;
-        }
-
         img {
             width: 50px;
             height: 50px;
@@ -140,24 +131,26 @@
             background-color: #d92b2b;
             box-shadow: 0px 0px 100px rgba(255, 102, 102, 0.8);
         }
-
         .table-content::-webkit-scrollbar {
             width: 10px;
         }
-
+        
         .table-content::-webkit-scrollbar-track {
             background: #2a2a2a;
             border-radius: 10px;
         }
-
+        
         .table-content::-webkit-scrollbar-thumb {
             background: #ff3838;
             border-radius: 10px;
             border: 2px solid #9c0000;
         }
-
+        
         .table-content::-webkit-scrollbar-thumb:hover {
             background: #d92b2b;
+        }
+        thead tr:hover {
+            background-color: #9c0000;
         }
     </style>
 </head>
@@ -210,6 +203,38 @@
                     <td>0</td>
                     <td>0</td>
                 </tr>
+                <tr>
+                    <td><img src="WoitiZProfilowe.png" alt=""></td>
+                    <td>WojtiZ</td>
+                    <td>N/A</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                </tr>
+                <tr>
+                    <td><img src="BartoProfilowe.png" alt=""></td>
+                    <td>B4rt0</td>
+                    <td>N/A</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                </tr>
+                <tr>
+                    <td><img src="JasioProfilowe.png" alt=""></td>
+                    <td>Dziador</td>
+                    <td>N/A</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                </tr>
+                <tr>
+                    <td><img src="ViniProfilowe.png" alt=""></td>
+                    <td>Vini</td>
+                    <td>N/A</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                </tr>
             </tbody>
         </table>
     </div>
@@ -218,6 +243,5 @@
         <a href="https://minibimo.github.io/f1/tabelaTorow.html">Tabela Torów</a>
         <a href="https://minibimo.github.io/f1/tabelaDruzynowa.html">Tabela Drużynowa</a>
     </div>
-
 </body>
 </html>
