@@ -35,16 +35,22 @@
             font-weight: bold;
             display: inline-block;
         }
-        table {
+        .table-container {
             width: 80%;
             margin: auto;
             border: 4px solid #ff3838;
-            border-spacing: 0;
             background-color: #2a2a2a;
             border-radius: 10px;
             overflow: hidden;
             box-shadow: 0 0 40px rgba(255, 102, 102, 1);
-            table-layout: auto;
+            max-height: 600px;
+            overflow-y: auto;
+            display: block;
+        }
+        table {
+            width: 100%;
+            border-spacing: 0;
+            table-layout: fixed;
         }
         th, td {
             padding: 25px;
@@ -83,11 +89,26 @@
             border-radius: 50%;
             border: 2px solid #f5a623;
         }
+        .table-container::-webkit-scrollbar {
+            width: 10px;
+        }
+        .table-container::-webkit-scrollbar-track {
+            background: #2a2a2a;
+            border-radius: 10px;
+        }
+        .table-container::-webkit-scrollbar-thumb {
+            background: #ff3838;
+            border-radius: 10px;
+            border: 2px solid #9c0000;
+        }
+        .table-container::-webkit-scrollbar-thumb:hover {
+            background: #d92b2b;
+        }
         .button-container {
             margin-top: 30px;
             display: flex;
             justify-content: center;
-            gap: 20px; /* Space between buttons */
+            gap: 20px;
             padding: 20px;
             background-color: #2a2a2a;
             border: 3px solid #ff3838;
@@ -113,65 +134,71 @@
             box-shadow: 0px 0px 100px rgba(255, 102, 102, 0.8);
         }
         .footer-text {
-        position: fixed;
-        bottom: 10px;
-        right: 15px;
-        font-size: 10px;
-        color: rgba(255, 255, 255, 0.5);
-        font-family: Arial, sans-serif;
-        user-select: none;
-    }
+            position: fixed;
+            bottom: 10px;
+            right: 15px;
+            font-size: 10px;
+            color: rgba(255, 255, 255, 0.5);
+            font-family: Arial, sans-serif;
+            user-select: none;
+        }
     </style>
 </head>
 <body>
 
     <h2>Tabela Drużyn</h2>
-    <table>
-        <tr>
-            <th>Zdjęcie</th>
-            <th>Nazwa</th>
-            <th>Punkty</th>
-        </tr>
-        <tr>
-            <td><img src="lotusLogo.png" alt=""></td>
-            <td>Lotus</td>
-            <td>33</td>
-        </tr>
-        <tr>
-            <td><img src="ferrariLogo.png" alt=""></td>
-            <td>Ferrari</td>
-            <td>26</td>
-        </tr>
-        <tr>
-            <td><img src="forceindiaLogo.png" alt=""></td>
-            <td>Force India</td>
-            <td>12</td>
-        </tr>
-        <tr>
-            <td><img src="mercedesLogo.png" alt=""></td>
-            <td>Mercedes</td>
-            <td>10</td>
-        </tr>
-        <tr>
-            <td><img src="scuderiatororosso.png" alt=""></td>
-            <td>Scuderia Toro Rosso</td>
-            <td>8</td>
-        </tr>
-        <tr>
-            <td><img src="McLarenLogo.png" alt=""></td>
-            <td>McLaren</td>
-            <td>-</td>
-        </tr>
-    </table>
-<div class="button-container">
-    <div style="display: flex; flex-direction: column; align-items: center;">
-        <div style="display: flex; gap: 20px;">
-            <a href="https://minibimo.github.io/f1/tabelaTorow.html">Tabela Torów</a>
-            <a href="https://minibimo.github.io/f1/tabelaKierowcow.html">Tabela Kierowców</a>
-        </div>
-        <a href="https://minibimo.github.io/f1/tabelaKwalifikacji.html" style="margin-top: 15px;">Tabela Kwalifikacji</a>
+
+    <div class="table-container">
+        <table>
+            <tr>
+                <th>Zdjęcie</th>
+                <th>Nazwa</th>
+                <th>Punkty</th>
+            </tr>
+            <tr>
+                <td><img src="lotusLogo.png" alt=""></td>
+                <td>Lotus</td>
+                <td>33</td>
+            </tr>
+            <tr>
+                <td><img src="ferrariLogo.png" alt=""></td>
+                <td>Ferrari</td>
+                <td>26</td>
+            </tr>
+            <tr>
+                <td><img src="forceindiaLogo.png" alt=""></td>
+                <td>Force India</td>
+                <td>12</td>
+            </tr>
+            <tr>
+                <td><img src="mercedesLogo.png" alt=""></td>
+                <td>Mercedes</td>
+                <td>10</td>
+            </tr>
+            <tr>
+                <td><img src="scuderiatororosso.png" alt=""></td>
+                <td>Scuderia Toro Rosso</td>
+                <td>8</td>
+            </tr>
+            <tr>
+                <td><img src="McLarenLogo.png" alt=""></td>
+                <td>McLaren</td>
+                <td>-</td>
+            </tr>
+        </table>
     </div>
-</div>
+
+    <div class="button-container">
+        <div style="display: flex; flex-direction: column; align-items: center;">
+            <div style="display: flex; gap: 20px;">
+                <a href="https://minibimo.github.io/f1/tabelaTorow.html">Tabela Torów</a>
+                <a href="https://minibimo.github.io/f1/tabelaKierowcow.html">Tabela Kierowców</a>
+            </div>
+            <a href="https://minibimo.github.io/f1/tabelaKwalifikacji.html" style="margin-top: 15px;">Tabela Kwalifikacji</a>
+        </div>
+    </div>
+
     <div class="footer-text">Brought to you by minibimo</div>
+
 </body>
 </html>
