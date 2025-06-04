@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Season Tables</title>
+  <style>
+    body, html {
+      margin: 0; padding: 0; height: 100vh;
+      font-family: Arial, sans-serif;
+      background: #1e1e1e;
+      color: MistyRose;
+    }
+    .container {
+      display: flex;
+      height: 99.2%;
+      border: 4px solid #ff3838;
+      border-radius: 12px;
+      box-shadow: 0 0 60px rgba(255, 102, 102, 0.6);
+      overflow: hidden;
+    }
+    .sidebar {
+      width: 220px;
+      background: #2a2a2a;
+      display: flex;
+      flex-direction: column;
+      padding: 10px;
+      box-sizing: border-box;
+      border-right: 3px solid #ff3838;
+    }
+.sidebar button {
+  background: transparent;
+  border: 2px solid #ff3838;
+  color: MistyRose;
+  padding: 15px 10px;
+  margin: 8px 0;
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  
+  /* Add glowing box-shadow */
+  box-shadow: 0 0 15px rgba(255, 56, 56, 0.7);
+}
+
+.sidebar button:hover {
+  background-color: rgba(255, 56, 56, 0.7);
+  color: MistyRose;
+  box-shadow: 0 0 30px rgba(255, 56, 56, 1);
+}
+
+.sidebar button.active {
+  background-color: rgba(255, 56, 56, 1);
+  color: MistyRose;
+  box-shadow: 0 0 30px rgba(255, 56, 56, 1);
+}
+
+
+    .content {
+      flex: 1;
+      background: #121212;
+      padding: 15px;
+      box-sizing: border-box;
+    }
+    iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+      border-radius: 8px;
+      background: white;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <nav class="sidebar">
+      <button data-url="tabelaKierowcow.html" class="active">Tabela Kierowców</button>
+      <button data-url="tabelaDruzynowa.html">Tabela Drużyn</button>
+      <button data-url="tabelaTorow.html">Tabela Torów</button>
+      <button data-url="tabelaKwalifikacji.html">Tabela Kwalifikacji</button>
+    </nav>
+
+    <section class="content">
+      <iframe src="individual.html" id="tableFrame" title="Table View"></iframe>
+    </section>
+  </div>
+
+  <script>
+    const buttons = document.querySelectorAll('.sidebar button');
+    const iframe = document.getElementById('tableFrame');
+
+    buttons.forEach(button => {
+      button.addEventListener('click', () => {
+        buttons.forEach(btn => btn.classList.remove('active'));
+        button.classList.add('active');
+        iframe.src = button.getAttribute('data-url');
+      });
+    });
+  </script>
+
+</body>
+</html>
