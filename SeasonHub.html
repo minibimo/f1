@@ -34,7 +34,7 @@
       cursor: pointer;
       overflow: hidden;
       transition: transform 0.3s ease;
-      border-right: 2px solid #ff3838;
+      border-right: 3px solid #ff3838;
     }
 
     .season:last-child {
@@ -46,11 +46,13 @@
       position: absolute;
       inset: 0;
       background-size: cover;
-      background-position: center;
+      background-position: center center;
+      background-repeat: no-repeat;
       filter: brightness(0.7);
       transition: transform 0.5s ease;
       z-index: 0;
     }
+
 
     .season:hover::before {
       transform: scale(1.1);
@@ -86,7 +88,7 @@
       padding: 20px 40px;
       border: 3px solid #ff3838;
       border-radius: 10px;
-      box-shadow: 0 0 40px rgba(255, 102, 102, 0.8);
+      box-shadow: 0 0 60px rgba(255, 102, 102, 0.8);
       transition: background-color 0.3s ease, box-shadow 0.3s ease;
     }
 
@@ -95,19 +97,17 @@
       box-shadow: 0 0 80px rgba(255, 102, 102, 1);
     }
 
-.credit {
+    .credit {
   position: fixed;
   bottom: 10px;
   right: 10px;
   color: #aaa;
-  font-size: 11px;           
+  font-size: 11px;
   font-weight: normal;
   font-family: Arial, sans-serif;
   opacity: 0.7;
-  padding: 10px 14px;        
   pointer-events: none;
 }
-
 
 
     @media (max-width: 768px) {
