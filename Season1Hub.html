@@ -3,14 +3,17 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Tabele Sezonu 1</title>
+  <title>Season 1 Tables</title>
   <style>
     body, html {
-      margin: 0; padding: 0; height: 100vh;
+      margin: 0;
+      padding: 0;
+      height: 100vh;
       font-family: Arial, sans-serif;
       background: #1e1e1e;
       color: MistyRose;
     }
+
     .container {
       display: flex;
       height: 99.2%;
@@ -19,6 +22,7 @@
       box-shadow: 0 0 60px rgba(255, 102, 102, 0.6);
       overflow: hidden;
     }
+
     .sidebar {
       width: 220px;
       background: #2a2a2a;
@@ -27,6 +31,24 @@
       padding: 10px;
       box-sizing: border-box;
       border-right: 3px solid #ff3838;
+    }
+
+    .sidebar .season-title {
+      text-align: center;
+      font-size: 1.2rem;
+      font-weight: bold;
+      margin-bottom: 15px;
+      padding: 10px;
+      border: 2px solid #ff3838;
+      border-radius: 8px;
+      color: MistyRose;
+      box-shadow: 0 0 15px rgba(255, 56, 56, 0.7);
+    }
+
+    .sidebar .top-buttons {
+      flex-grow: 1;
+      display: flex;
+      flex-direction: column;
     }
 
     .sidebar button {
@@ -44,19 +66,13 @@
     }
 
     .sidebar button:hover {
-      background-color: rgba(255, 56, 56, 0.6);
-      color: MistyRose;
+      background-color: rgba(255, 56, 56, 0.8);
       box-shadow: 0 0 30px rgba(255, 56, 56, 1);
     }
 
     .sidebar button.active {
       background-color: rgba(255, 56, 56, 1);
-      color: MistyRose;
       box-shadow: 0 0 30px rgba(255, 56, 56, 1);
-    }
-
-    .sidebar .back-button {
-      margin-top: auto;
     }
 
     .content {
@@ -79,12 +95,14 @@
 
   <div class="container">
     <nav class="sidebar">
-      <button data-url="tabelaKierowcow.html" class="active">Tabela Kierowców</button>
-      <button data-url="tabelaDruzynowa.html">Tabela Drużyn</button>
-      <button data-url="tabelaTorow.html">Tabela Torów</button>
-      <button data-url="tabelaKwalifikacji.html">Tabela Kwalifikacji</button>
-
-      <button class="back-button" onclick="location.href='SeasonHub.html'">← Sezony</button>
+      <div class="season-title">Sezon 1</div>
+      <div class="top-buttons">
+        <button data-url="tabelaKierowcow.html" class="active">Tabela Kierowców</button>
+        <button data-url="tabelaDruzynowa.html">Tabela Drużyn</button>
+        <button data-url="tabelaTorow.html">Tabela Torów</button>
+        <button data-url="tabelaKwalifikacji.html">Tabela Kwalifikacji</button>
+      </div>
+      <button onclick="SeasonHub.href='index.html'">← Sezony</button>
     </nav>
 
     <section class="content">
