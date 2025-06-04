@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Sezonowy Hub</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body, html {
+      height: 100%;
+      font-family: Arial, sans-serif;
+      background-color: #1e1e1e;
+      color: MistyRose;
+    }
+
+    .hub {
+      display: flex;
+      height: 100vh;
+      width: 100%;
+      border: 4px solid #ff3838;
+      border-radius: 12px;
+      box-shadow: 0 0 60px rgba(255, 102, 102, 0.6);
+      overflow: hidden;
+    }
+
+    .season {
+      flex: 1;
+      position: relative;
+      cursor: pointer;
+      overflow: hidden;
+      transition: transform 0.3s ease;
+      border-right: 2px solid #ff3838;
+    }
+
+    .season:last-child {
+      border-right: none;
+    }
+
+    .season::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background-size: cover;
+      background-position: center;
+      filter: brightness(0.7);
+      transition: transform 0.5s ease;
+      z-index: 0;
+    }
+
+    .season:hover::before {
+      transform: scale(1.1);
+      filter: brightness(0.9);
+    }
+
+    .season-1::before {
+      background-image: url('Seaon1.jpg');
+    }
+
+    .season-2::before {
+      background-image: url('Seaon2.jpg');
+    }
+
+    .season a {
+      display: block;
+      width: 100%;
+      height: 100%;
+      text-decoration: none;
+      color: MistyRose;
+    }
+
+    .season-text {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      z-index: 1;
+      transform: translate(-50%, -50%);
+      font-size: 3rem;
+      font-weight: bold;
+      text-shadow: 2px 2px 10px #000;
+      background-color: rgba(42, 42, 42, 0.6);
+      padding: 20px 40px;
+      border: 3px solid #ff3838;
+      border-radius: 10px;
+      box-shadow: 0 0 40px rgba(255, 102, 102, 0.8);
+      transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .season:hover .season-text {
+      background-color: rgba(42, 42, 42, 0.85);
+      box-shadow: 0 0 80px rgba(255, 102, 102, 1);
+    }
+
+.credit {
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  color: #aaa;
+  font-size: 11px;           
+  font-weight: normal;
+  font-family: Arial, sans-serif;
+  opacity: 0.7;
+  padding: 10px 14px;        
+  pointer-events: none;
+}
+
+
+
+    @media (max-width: 768px) {
+      .hub {
+        flex-direction: column;
+      }
+      .season {
+        border-right: none;
+        border-bottom: 2px solid #ff3838;
+      }
+      .season:last-child {
+        border-bottom: none;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="hub">
+    <div class="season season-1">
+      <a href="season1.html">
+        <div class="season-text">Sezon 1</div>
+      </a>
+    </div>
+    <div class="season season-2">
+      <a href="season2.html">
+        <div class="season-text">Sezon 2</div>
+      </a>
+    </div>
+  </div>
+
+  <div class="credit">Brought to you by minibimo</div>
+
+</body>
+</html>
