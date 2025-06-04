@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Tabela Kwalifikacji</title>
+    <link rel="icon" href="F1logo.png" type="image/png" />
+    <style>
+        body {
+            background-color: #121212;
+            color: #d4d9ff; /* misty blue */
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 20px;
+        }
+        body::before {
+            content: "";
+            position: fixed;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            background: url('zdj4.png') no-repeat center center/cover;
+            opacity: 0.07;
+            z-index: -1;
+        }
+        h2 {
+            color: #d4d9ff;
+            padding: 20px;
+            background-color: #2c2f4a;
+            border-radius: 10px;
+            box-shadow: 0px 4px 60px rgba(98, 114, 164, 0.5);
+            margin-bottom: 30px;
+            border: 3px solid #6272a4;
+            font-weight: bold;
+            display: inline-block;
+        }
+        .table-container {
+            width: 80%;
+            margin: auto;
+            border: 4px solid #6272a4;
+            background-color: #2c2f4a;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 0 40px rgba(98, 114, 164, 0.7);
+        }
+        table {
+            width: 100%;
+            border-spacing: 0;
+            table-layout: fixed;
+        }
+        thead {
+            background-color: #3f4a91; /* darker blue header */
+            color: #d4d9ff;
+            font-size: 20px;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 2;
+        }
+        th, td {
+            padding: 25px;
+            border-bottom: 3px solid #444;
+            text-align: center;
+        }
+        .table-content {
+            max-height: 535px;
+            overflow-y: auto;
+            display: block;
+        }
+        tbody {
+            display: block;
+            width: 100%;
+        }
+        tr {
+            display: table;
+            width: 100%;
+            table-layout: fixed;
+        }
+        tr:nth-child(even) {
+            background-color: #2a2d44;
+        }
+        tr:hover {
+            background-color: #3a3e6c;
+        }
+        img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            border: 2px solid #8899ff;
+        }
+        .footer-text {
+            position: fixed;
+            bottom: 10px;
+            right: 15px;
+            font-size: 10px;
+            color: rgba(212, 217, 255, 0.5);
+            font-family: Arial, sans-serif;
+            user-select: none;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Tabela Kwalifikacji</h2>
+
+    <div class="table-container">
+        <table>
+            <thead>
+                <tr>
+                    <th>Zdjęcie</th>
+                    <th>Nazwa</th>
+                    <th>Tor</th>
+                    <th>Najszybszy Czas Kwalifikacji</th>
+                </tr>
+            </thead>
+            <tbody class="table-content">
+                <tr>
+                    <td><img src="RansiakProfilowe.png" alt="Ransiak" /></td>
+                    <td>Ransiak</td>
+                    <td>Silverstone Circuit</td>
+                    <td>1:50.023</td>
+                </tr>
+                <tr>
+                    <td><img src="KrolikProfilowe.png" alt="Krolik" /></td>
+                    <td>Królik</td>
+                    <td>Valencia Street Circuit</td>
+                    <td>1:37.500</td>
+                </tr>
+                <tr>
+                    <td><img src="SzczepixProfilowe.png" alt="Szczepix" /></td>
+                    <td>Szczepix</td>
+                    <td>Silverstone Circuit</td>
+                    <td>1:51.750</td>
+                </tr>
+                <tr>
+                    <td><img src="RaisterProfilowe.png" alt="Raister" /></td>
+                    <td>Raister</td>
+                    <td>Autodromo Monza</td>
+                    <td>1:52.042</td>
+                </tr>
+                <tr>
+                    <td><img src="RansiakProfilowe.png" alt="Ransiak" /></td>
+                    <td>Ransiak</td>
+                    <td>Autodromo Monza</td>
+                    <td>1:27.163</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="footer-text">Brought to you by minibimo</div>
+</body>
+</html>
