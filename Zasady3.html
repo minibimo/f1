@@ -43,21 +43,49 @@
       border: 4px solid #9b59b6;
       box-shadow: 0 0 40px rgba(155, 89, 182, 0.7);
     }
+
+    /* List styling */
     ol {
       padding-left: 20px;
     }
+
     li {
-      margin-bottom: 15px;
       line-height: 1.6;
+      margin-bottom: 10px;
     }
+
     li ul {
-      margin-top: 8px;
+      margin-top: 13px;
       padding-left: 20px;
+      list-style-type: none;
     }
-    li ul li {
-      list-style-type: circle;
-      margin-bottom: 8px;
+
+    /* Font sizing per level */
+    ol > li {
+      font-size: 25px; /* Numbered rules */
+      font-weight: bold;
     }
+
+    ol > li > ul > li {
+      font-size: 18px; /* Hollow circle level */
+      font-weight: normal;
+      list-style-type: disc;
+    }
+
+    ol > li > ul > ul {
+      padding-left: 25px;
+    }
+
+    ol > li > ul > ul > li {
+      font-size: 16px; /* ➔ level */
+      font-weight: normal;
+    }
+
+    ol > li > ul > ul > ul > li {
+      font-size: 14px; /* → level */
+      font-weight: normal;
+    }
+
     .footer-text {
       position: fixed;
       bottom: 10px;
@@ -78,25 +106,127 @@
       <li>
         Jazda zgodnie z kierunkiem toru
         <ul>
-          <li>Zabronione jest jazda pod prąd.</li>
-          <li>Obowiązuje respektowanie linii pit-stopu.</li>
+          <li>Zabronione jest jazda pod prąd</li>
+          <li>Obowiązuje respektowanie linii pit-stopu i jej limitu prędkości</li>
+          <ul>
+            <li>➔ Przekroczenie limitu skutkuje automatyczną karą czasową</li>
+            <ul><li>→ Kara czasowa może być w postaci dodatkowego czasu w pit-boksie lub dodanego czasu na koniec&nbsp;wyścigu</li></ul>
+          </ul>
         </ul>
       </li>
+
       <li>
-        Respektowanie żółtych flag
+        Brawurowa jazda
         <ul>
-          <li>Podczas żółtej flagi nie można wyprzedzać.</li>
-          <li>Należy zachować ostrożność i zmniejszyć prędkość.</li>
+          <li>Wymuszanie kolizji jest surowo zabronione</li>
+          <li>Wracając na tor, należy zachować uwagę i nie powodować zagrożenia
+            <ul>
+              <li>➔ Kierowca musi ustąpić pierwszeństwa pojazdom na torze</li>
+              <li>➔ Wyjątek: jeśli powrót następuje na prostej i nie zagraża innym</li>
+            </ul>
+          </li>
+          <li>Zakazane jest blokowanie lub agresywne hamowanie</li>
         </ul>
       </li>
+
       <li>
-        Kary za niebezpieczną jazdę
+        Pit-lane i Pit-stop
         <ul>
-          <li>Wymuszanie kolizji jest surowo zabronione.</li>
-          <li>Niebezpieczny powrót na tor = kara.</li>
+          <li>Wjeżdżając do linii pitu należy załączyć limiter prędkości</li>
+          <ul><li>➔ Niedokonanie punktu powyżej będzie skutkowało karą</li></ul>
+
+          <li>W wypadku brakującego skrzydła, należy zresetować bolid</li>
+          <ul>
+            <li>➔ Resetowanie bolidu jest dozwolone tylko i wyłącznie w pit-boksie</li>
+            <li>➔ Należy również zaczekać 20 sekund przy naprawie brakującego przedniego lub tylnego skrzydła</li>
+            <ul>
+              <li>→ W wypadku obydwu brakujących skrzydeł, należy zaczekać 40 sekund w pit-boksie</li>
+              <li>→ Nieprzestrzeganie tego czasu skutkuje karą punktową</li>
+            </ul>
+          </ul>
+
+          <li>Podczas każdego wyścigu należy wykonać przynajmniej jeden pit-stop ze zmianą mieszanki opon</li>
+          <ul><li>➔ Podczas deszczu, dopuszczalna jest zmiana mieszanki opon na tę samą, pod warunkiem, że są to opony mokre</li></ul>
         </ul>
       </li>
-      <!-- Dodaj kolejne zasady tutaj -->
+
+      <li>
+        Punktacja
+        <ul>
+          <li>Punkty przyznawane są zgodnie z pozycją na mecie</li>
+          <li>Brak ukończenia wyścigu skutkuje utratą punktów za ten wyścig</li>
+          <ul><li>➔ Wyjątek stanowi sytuacja awaryjna potwierdzona przez sędziów</li></ul>
+          <li>W przypadku równej liczby punktów decyduje liczba zwycięstw</li>
+        </ul>
+      </li>
+
+      <li>
+        Kwalifikacje
+        <ul>
+          <li>Kierowcy muszą przestrzegać limitów toru podczas kwalifikacji</li>
+          <ul><li>➔ Przekroczenie limitów toru skutkuje anulowaniem najszybszego czasu</li></ul>
+          <li>Zakazane jest blokowanie innych zawodników podczas okrążeń pomiarowych</li>
+          <ul><li>➔ Wielokrotne naruszenia skutkują karą przesunięcia na starcie wyścigu</li></ul>
+        </ul>
+      </li>
+
+      <li>
+        Kary i sankcje
+        <ul>
+          <li>Kary mogą obejmować kary czasowe, kary punktowe oraz dyskwalifikacje</li>
+          <li>Decyzje sędziów są ostateczne i niepodważalne</li>
+          <li>Kary za powtarzające się przewinienia będą zaostrzane</li>
+          <ul>
+            <li>➔ Kierowca może zostać zawieszony na kolejne wyścigi</li>
+            <li>➔ Przy poważnych naruszeniach możliwa jest dyskwalifikacja sezonu</li>
+          </ul>
+        </ul>
+      </li>
+
+      <li>
+        Zachowanie na torze
+        <ul>
+          <li>Zabronione jest celowe spowalnianie lub utrudnianie wyprzedzania</li>
+          <li>Należy szanować innych zawodników i unikać agresywnych zachowań</li>
+          <li>Zachowanie fair-play jest obowiązkowe przez cały sezon</li>
+        </ul>
+      </li>
+
+      <li>
+        Warunki pogodowe
+        <ul>
+          <li>W przypadku zmiany pogody dopuszcza się odpowiednią zmianę opon</li>
+          <ul><li>➔ Decyzje dotyczące dopuszczalnych zmian podejmuje komisja sędziowska</li></ul>
+          <li>Sędziowie mogą wprowadzić dodatkowe regulacje ze względu na warunki atmosferyczne</li>
+        </ul>
+      </li>
+
+      <li>
+        Sprzęt i ustawienia
+        <ul>
+          <li>Kierowcy muszą korzystać z oficjalnego sprzętu i oprogramowania</li>
+          <li>Zmiany ustawień bolidu muszą być zgodne z regulaminem technicznym</li>
+          <li>Nieautoryzowane modyfikacje skutkują dyskwalifikacją</li>
+        </ul>
+      </li>
+
+      <li>
+        Protesty i odwołania
+        <ul>
+          <li>Protesty muszą być zgłaszane w określonym czasie po zakończeniu wyścigu</li>
+          <li>Odwołania są rozpatrywane przez komisję sędziowską</li>
+          <li>Decyzje komisji są ostateczne</li>
+        </ul>
+      </li>
+
+      <li>
+        Bezpieczeństwo
+        <ul>
+          <li>Kierowcy są zobowiązani do przestrzegania wszystkich przepisów bezpieczeństwa</li>
+          <li>Wszelkie incydenty muszą być natychmiast zgłaszane organizatorom</li>
+          <li>Niedostosowanie się do zasad bezpieczeństwa skutkuje poważnymi sankcjami</li>
+        </ul>
+      </li>
     </ol>
   </div>
 
