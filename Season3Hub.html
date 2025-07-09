@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" href="F1S2logo.png" type="image/png">
+  <title>Hub Sezonu 3</title>
+  <style>
+    body, html {
+      margin: 0;
+      padding: 0;
+      height: 100vh;
+      font-family: Arial, sans-serif;
+      background: #1e1e1e;
+      color: #f5e6ff;
+    }
+
+    .container {
+      display: flex;
+      height: 99.2%;
+      border: 4px solid #9b59b6;
+      border-radius: 12px;
+      box-shadow: 0 0 60px rgba(155, 89, 182, 0.6);
+      overflow: hidden;
+    }
+
+    .sidebar {
+      width: 220px;
+      background: #2a2a2a;
+      display: flex;
+      flex-direction: column;
+      padding: 10px;
+      box-sizing: border-box;
+      border-right: 3px solid #9b59b6;
+    }
+
+    .sidebar .season-title {
+      background-color: rgba(155, 89, 182, 0.2);
+      text-align: center;
+      font-size: 1.2rem;
+      font-weight: bold;
+      margin-bottom: 15px;
+      padding: 10px;
+      border: 2px solid #9b59b6;
+      border-radius: 8px;
+      color: #f5e6ff;
+      box-shadow: 0 0 15px rgba(155, 89, 182, 0.7);
+    }
+
+    .sidebar .top-buttons {
+      flex-grow: 1;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .sidebar button {
+      background: transparent;
+      border: 2px solid #9b59b6;
+      color: #f5e6ff;
+      padding: 15px 10px;
+      margin: 8px 0;
+      font-size: 1rem;
+      font-weight: bold;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background-color 0.3s ease, box-shadow 0.3s ease;
+      box-shadow: 0 0 15px rgba(155, 89, 182, 0.5);
+    }
+
+    .sidebar button:hover {
+      background-color: rgba(155, 89, 182, 0.75);
+      box-shadow: 0 0 30px rgba(155, 89, 182, 1);
+    }
+
+    .sidebar button.active {
+      background-color: rgba(155, 89, 182, 1);
+      box-shadow: 0 0 30px rgba(155, 89, 182, 1);
+    }
+
+    .content {
+      flex: 1;
+      background: #121212;
+      padding: 15px;
+      box-sizing: border-box;
+    }
+
+    iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+      border-radius: 8px;
+      background: white;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <nav class="sidebar">
+      <div class="season-title">Sezon 3</div>
+      <div class="top-buttons">
+        <button data-url="tabelaKierowcow3.html" class="active">Tabela Kierowców</button>
+        <button data-url="tabelaDruzynowa3.html">Tabela Drużyn</button>
+        <button data-url="tabelaTorow3.html">Tabela Torów</button>
+        <button data-url="tabelaKwalifikacji3.html">Tabela Kwalifikacji</button>
+        <button data-url="Zasady3.html">Zasady</button>
+      </div>
+     <button onclick="location.href='SeasonHub.html'">← Sezony</button>
+    </nav>
+
+    <section class="content">
+      <iframe src="tabelaKierowcow2.html" id="tableFrame" title="Table View"></iframe>
+    </section>
+  </div>
+
+  <script>
+    const buttons = document.querySelectorAll('.sidebar button[data-url]');
+    const iframe = document.getElementById('tableFrame');
+
+    buttons.forEach(button => {
+      button.addEventListener('click', () => {
+        buttons.forEach(btn => btn.classList.remove('active'));
+        button.classList.add('active');
+        iframe.src = button.getAttribute('data-url');
+      });
+    });
+  </script>
+
+</body>
+</html>
